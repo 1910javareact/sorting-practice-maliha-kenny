@@ -8,7 +8,7 @@ import com.revature.sort.MergeSort;
 
 public class Driver {
 	
-	private static final int AMOUNT = 5;
+	private static final int AMOUNT = 100000;
 
 	public static void main(String[] args) {
 		int[] arr = new int[AMOUNT];
@@ -17,9 +17,7 @@ public class Driver {
 		for(int i = 0; i < AMOUNT; i++) {
 			arr[i] = r.nextInt(AMOUNT);
 		}
-		
-		System.out.println(Arrays.toString(arr));
-		
+				
 		int[] arr2 = Arrays.copyOf(arr, AMOUNT);
 		
 		long t1 = System.nanoTime();
@@ -41,7 +39,7 @@ public class Driver {
 		
 		if(Arrays.equals(arr, arr2)) {
 			System.out.println("It took bubblesort algorithm " + bubblesort + " ns to sort");
-			System.out.println("It took mergesort algorithm " + mergesort + " ns to sort");
+			System.out.println("It took mergesort algorithm  " + mergesort + " ns to sort");
 		} else {
 			System.out.println("Arrays are not the same.");
 		}
